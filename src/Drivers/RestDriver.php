@@ -173,9 +173,10 @@ class RestDriver implements DriverInterface
             $body = json_decode($rawBody, true);
         }
 
-        if (!isset($result['Status'])) {
-            $result['Status'] = -99;
-        }
+        #status code is not used and $result wasn't declared in the code I don't know why so I commented it
+//        if (!isset($result['Status'])) {
+//            $result['Status'] = -99;
+//        }
 
         return $body;
     }
